@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bubuu's Dream Garden 🌙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🌙 Header -->
+    <header>
+        <h1>🌙 Bubuu's Dream Garden 🌷</h1>
+        <p>“Every dream begins with a little hope.” ✨</p>
+    </header>
+
+
+    <!-- 📊 Dream Summary -->
+    <section>
+        <h2>✨ My Dream Journey</h2>
+
+        <div>
+            <h3>💭 Total Dreams</h3>
+            <p id="totalDreams">0</p>
+        </div>
+
+        <div>
+            <h3>⏳ In Progress</h3>
+            <p id="pendingDreams">0</p>
+        </div>
+
+        <div>
+            <h3>✅ Completed</h3>
+            <p id="completedDreams">0</p>
+        </div>
+
+        <div>
+            <h3>🌟 Progress</h3>
+            <p id="dreamProgress">0%</p>
+        </div>
+    </section>
+
+
+    <!-- ➕ Add Dream -->
+    <section>
+        <h2>💭 Add a New Dream</h2>
+
+        <form id="dreamForm">
+
+            <label for="dreamTitle">🌷 Dream Title</label>
+            <input
+                type="text"
+                id="dreamTitle"
+                placeholder="Enter your dream..."
+                required
+            >
+
+            <br><br>
+
+            <label for="dreamDescription">📝 Description</label>
+            <textarea
+                id="dreamDescription"
+                placeholder="Tell me about your dream..."
+            ></textarea>
+
+            <br><br>
+
+            <label for="dreamCategory">🏷️ Category</label>
+            <select id="dreamCategory">
+
+                <option value="">-- Choose a category --</option>
+                <option value="Career">🏦 Career</option>
+                <option value="Study">🎓 Study</option>
+                <option value="Travel">✈️ Travel</option>
+                <option value="Finance">💰 Finance</option>
+                <option value="Family">🏠 Family</option>
+                <option value="Personal">💗 Personal</option>
+                <option value="Other">🌟 Other</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="dreamPriority">🎯 Priority</label>
+            <select id="dreamPriority">
+
+                <option value="">-- Choose priority --</option>
+                <option value="High">🔴 High</option>
+                <option value="Medium">🟡 Medium</option>
+                <option value="Low">🟢 Low</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="targetDate">📅 Target Date</label>
+            <input type="date" id="targetDate">
+
+            <br><br>
+
+            <label for="dreamReason">💌 Why this dream matters?</label>
+            <textarea
+                id="dreamReason"
+                placeholder="Write something special..."
+            ></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                🌷 Add My Dream
+            </button>
+
+        </form>
+    </section>
+
+
+    <!-- 📋 My Dreams -->
+    <section>
+        <h2>💭 My Dreams</h2>
+
+        <div id="dreamList">
+
+            <!-- Dreams will appear here -->
+
+            <p id="noDreams">
+                🌙 No dreams added yet...
+                <br>
+                Start adding your beautiful dreams! 🐰💗
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ✨ My Achievements -->
+    <section>
+        <h2>✨ My Achievements</h2>
+
+        <div id="achievementList">
+
+            <p id="noAchievements">
+                🌷 Your completed dreams will appear here...
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- 🌸 Footer -->
+    <footer>
+        <p>🐰 Made with love, dreams & tiny hopes 🌙💗</p>
+    </footer>
+
+
+    <!-- JavaScript will be connected later -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

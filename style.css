@@ -1,0 +1,668 @@
+/* =========================================================
+   🌙 BUBUU'S DREAM GARDEN 🌷
+   Complete style.css
+   ========================================================= */
+
+
+/* 🌸 BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #fff1f8, transparent 35%),
+        radial-gradient(circle at top right, #f0e8ff, transparent 35%),
+        linear-gradient(135deg, #fff8fc, #f8f1ff, #fff5f8);
+    color: #5f5068;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   🌙 HEADER
+   ========================================================= */
+
+header {
+    text-align: center;
+    padding: 55px 20px 40px;
+    background: linear-gradient(
+        135deg,
+        #f8d9eb,
+        #eadcf8,
+        #f9e3ef
+    );
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    box-shadow: 0 8px 25px rgba(120, 80, 130, 0.12);
+}
+
+header h1 {
+    color: #9c5f8d;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #806b86;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   📦 COMMON SECTION
+   ========================================================= */
+
+section {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 28px;
+    box-shadow: 0 10px 35px rgba(110, 75, 120, 0.10);
+    backdrop-filter: blur(8px);
+}
+
+section h2 {
+    text-align: center;
+    color: #a25f91;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   📊 DREAM SUMMARY
+   ========================================================= */
+
+section:first-of-type {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 244, 250, 0.95),
+        rgba(246, 239, 255, 0.95)
+    );
+}
+
+section:first-of-type > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+section:first-of-type > div > div {
+    background: linear-gradient(
+        145deg,
+        #fffafd,
+        #f8efff
+    );
+    padding: 22px 15px;
+    border-radius: 22px;
+    text-align: center;
+    border: 1px solid #f2e2f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:first-of-type > div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(150, 100, 160, 0.15);
+}
+
+section:first-of-type h3 {
+    color: #806586;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+section:first-of-type p {
+    color: #b25e92;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   💭 ADD DREAM FORM
+   ========================================================= */
+
+#dreamForm {
+    max-width: 800px;
+    margin: auto;
+}
+
+#dreamForm label {
+    display: block;
+    margin-bottom: 7px;
+    color: #795f7e;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#dreamForm input,
+#dreamForm textarea,
+#dreamForm select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #ead8e9;
+    border-radius: 15px;
+    background: #fffafd;
+    color: #5e5065;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+#dreamForm input:focus,
+#dreamForm textarea:focus,
+#dreamForm select:focus {
+    border-color: #c99ac7;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(201, 154, 199, 0.12);
+}
+
+#dreamForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#dreamForm select {
+    cursor: pointer;
+}
+
+#dreamForm input::placeholder,
+#dreamForm textarea::placeholder {
+    color: #b8a9b9;
+}
+
+
+/* =========================================================
+   🌷 MAIN BUTTON
+   ========================================================= */
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 13px 22px;
+    background: linear-gradient(
+        135deg,
+        #d783ad,
+        #b47bc8
+    );
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 7px 18px rgba(170, 110, 170, 0.18);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(170, 110, 170, 0.25);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#dreamForm button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   💭 MY DREAMS / ACHIEVEMENTS
+   ========================================================= */
+
+#dreamList,
+#achievementList {
+    display: grid;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   🌷 DREAM CARD
+   ========================================================= */
+
+.dream-card {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        #fffafd,
+        #f8f0ff
+    );
+    border: 2px solid #f0dfef;
+    border-radius: 23px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(110, 75, 120, 0.08);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.dream-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(110, 75, 120, 0.13);
+}
+
+.dream-card h3 {
+    color: #a85f91;
+    font-size: 21px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.dream-card p {
+    color: #75647a;
+    font-size: 14px;
+    margin: 7px 0;
+    word-wrap: break-word;
+}
+
+.dream-card .status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #eee1f7;
+    color: #8b6498;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   ✨ COMPLETED DREAM
+   ========================================================= */
+
+.dream-card.completed {
+    background: linear-gradient(
+        145deg,
+        #fffaf4,
+        #fff2f8,
+        #f7f0ff
+    );
+    border-color: #ead5df;
+    position: relative;
+    overflow: hidden;
+}
+
+.dream-card.completed .status {
+    background: #e4f3e9;
+    color: #4d9a6e;
+}
+
+
+/* =========================================================
+   🎀 CARD BUTTONS
+   ========================================================= */
+
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.card-buttons button {
+    flex: 1;
+    min-width: 90px;
+    margin: 0;
+    padding: 9px 10px;
+    font-size: 13px;
+}
+
+.card-buttons button:nth-child(1) {
+    background: linear-gradient(
+        135deg,
+        #c995d8,
+        #aa7fc0
+    );
+}
+
+.card-buttons button:last-child {
+    background: linear-gradient(
+        135deg,
+        #e99aaa,
+        #d77d91
+    );
+}
+
+.dream-card:not(.completed)
+.card-buttons button:first-child {
+    background: linear-gradient(
+        135deg,
+        #76c99b,
+        #55aa7c
+    );
+}
+
+
+/* =========================================================
+   🏆 ACHIEVED RIBBON
+   ========================================================= */
+
+.dream-card.completed::before {
+    content: "✨ ACHIEVED ✨";
+    position: absolute;
+    top: 12px;
+    right: -35px;
+    background: #e9b95e;
+    color: white;
+    padding: 5px 40px;
+    font-size: 10px;
+    font-weight: bold;
+    transform: rotate(35deg);
+}
+
+
+/* =========================================================
+   🌙 EMPTY STATES
+   ========================================================= */
+
+#noDreams,
+#noAchievements {
+    text-align: center;
+    padding: 35px 20px;
+    color: #a08fa4;
+    font-size: 15px;
+    background: #fffafd;
+    border: 2px dashed #ead9e8;
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   🎉 DREAM ACHIEVED CELEBRATION
+   ========================================================= */
+
+.celebration-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(70, 45, 80, 0.55);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: popupBackground 0.4s ease;
+}
+
+.celebration-box {
+    width: min(500px, 100%);
+    background: linear-gradient(
+        145deg,
+        #fffaff,
+        #fff0f7,
+        #f6edff
+    );
+    border: 3px solid white;
+    border-radius: 35px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(90, 55, 100, 0.3);
+    animation: celebrationAppear 0.6s ease;
+}
+
+.celebration-stars {
+    font-size: 30px;
+    margin-bottom: 15px;
+    animation: sparkle 1.5s infinite;
+}
+
+.celebration-box h2 {
+    color: #b45489;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.celebration-box h1 {
+    color: #c05b91;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.celebration-box p {
+    color: #705e76;
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+.celebration-box h3 {
+    color: #8d6595;
+    font-size: 16px;
+    margin: 25px 0;
+    line-height: 1.5;
+}
+
+.confetti {
+    font-size: 25px;
+    margin: 15px 0;
+    letter-spacing: 5px;
+    animation: sparkle 1.2s infinite;
+}
+
+.celebration-box button {
+    margin-top: 10px;
+    width: auto;
+    background: linear-gradient(
+        135deg,
+        #d979a7,
+        #b875c9
+    );
+}
+
+
+/* =========================================================
+   ✨ CELEBRATION ANIMATIONS
+   ========================================================= */
+
+@keyframes popupBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes celebrationAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(30px);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   🎊 FALLING CONFETTI
+   ========================================================= */
+
+.falling-confetti {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    z-index: 10000;
+    pointer-events: none;
+    animation: fallConfetti 4s linear forwards;
+}
+
+@keyframes fallConfetti {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   🌸 FOOTER
+   ========================================================= */
+
+footer {
+    text-align: center;
+    padding: 35px 20px 45px;
+    color: #927d96;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   📱 MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    section:first-of-type > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    header {
+        padding: 45px 18px 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    section {
+        width: 94%;
+        padding: 22px 16px;
+        border-radius: 22px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section:first-of-type > div {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    section:first-of-type > div > div {
+        padding: 16px 8px;
+    }
+
+    section:first-of-type p {
+        font-size: 25px;
+    }
+
+    .dream-card {
+        padding: 20px 17px;
+    }
+
+    .dream-card h3 {
+        font-size: 18px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .card-buttons button {
+        width: 100%;
+    }
+
+    .celebration-box {
+        padding: 30px 18px;
+        border-radius: 28px;
+    }
+
+    .celebration-box h2 {
+        font-size: 18px;
+    }
+
+    .celebration-box h1 {
+        font-size: 23px;
+    }
+
+    .celebration-box p {
+        font-size: 15px;
+    }
+
+    .celebration-stars {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    section:first-of-type > div {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .celebration-box h1 {
+        font-size: 20px;
+    }
+}
+
