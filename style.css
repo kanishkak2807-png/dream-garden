@@ -665,4 +665,197 @@ footer {
         font-size: 20px;
     }
 }
+/* =========================================================
+   🔐 SECRET GARDEN LOCK SCREEN
+   ========================================================= */
+
+#lockScreen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, #ffe4f1, transparent 35%),
+        radial-gradient(circle at bottom right, #e8dcff, transparent 35%),
+        linear-gradient(135deg, #fff5fb, #f5efff);
+}
+
+.lock-box {
+    width: min(450px, 100%);
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(120, 80, 130, 0.18);
+
+    backdrop-filter: blur(10px);
+
+    animation: lockAppear 0.7s ease;
+}
+
+.lock-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+
+    animation: lockFloat 2s ease-in-out infinite;
+}
+
+.lock-box h1 {
+    color: #a25f91;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.lock-box p {
+    color: #76627b;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.lock-box .lock-small {
+    color: #9a879e;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+#secretCode {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 2px solid #ead8e9;
+    border-radius: 15px;
+
+    background: #fffafd;
+
+    color: #5e5065;
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+#secretCode:focus {
+    border-color: #c99ac7;
+
+    box-shadow:
+        0 0 0 4px rgba(201, 154, 199, 0.12);
+}
+
+#secretCode::placeholder {
+    color: #b8a9b9;
+}
+
+.lock-box button {
+    width: 100%;
+    margin-top: 18px;
+
+    padding: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #d783ad,
+        #b47bc8
+    );
+
+    color: white;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.lock-box button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(170, 110, 170, 0.25);
+}
+
+#wrongCode {
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    color: #d36b82 !important;
+
+    font-size: 14px !important;
+    font-weight: 600;
+}
+
+
+/* 🔐 LOCK ANIMATIONS */
+
+@keyframes lockAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+@keyframes lockFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* 📱 MOBILE */
+
+@media (max-width: 600px) {
+
+    #lockScreen {
+        padding: 18px;
+    }
+
+    .lock-box {
+        padding: 35px 20px;
+        border-radius: 28px;
+    }
+
+    .lock-icon {
+        font-size: 55px;
+    }
+
+    .lock-box h1 {
+        font-size: 24px;
+    }
+
+}
 
