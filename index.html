@@ -6,157 +6,355 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bubuu's Dream Garden 🌙</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- 🌙 Header -->
-    <header>
-        <h1>🌙 Bubuu's Dream Garden 🌷</h1>
-        <p>“Every dream begins with a little hope.” ✨</p>
-    </header>
+    <!-- 🔐 SECRET LOCK SCREEN -->
 
+    <div id="lockScreen">
 
-    <!-- 📊 Dream Summary -->
-    <section>
-        <h2>✨ My Dream Journey</h2>
+        <div class="lock-box">
 
-        <div>
-            <h3>💭 Total Dreams</h3>
-            <p id="totalDreams">0</p>
-        </div>
+            <div class="lock-icon">
+                🔐
+            </div>
 
-        <div>
-            <h3>⏳ In Progress</h3>
-            <p id="pendingDreams">0</p>
-        </div>
+            <h1>
+                Bubuu's Secret Garden 🌙
+            </h1>
 
-        <div>
-            <h3>✅ Completed</h3>
-            <p id="completedDreams">0</p>
-        </div>
+            <p>
+                💗 This is your private dream space.
+            </p>
 
-        <div>
-            <h3>🌟 Progress</h3>
-            <p id="dreamProgress">0%</p>
-        </div>
-    </section>
+            <p class="lock-small">
+                Enter your secret code to continue ✨
+            </p>
 
-
-    <!-- ➕ Add Dream -->
-    <section>
-        <h2>💭 Add a New Dream</h2>
-
-        <form id="dreamForm">
-
-            <label for="dreamTitle">🌷 Dream Title</label>
             <input
-                type="text"
-                id="dreamTitle"
-                placeholder="Enter your dream..."
-                required
+                type="password"
+                id="secretCode"
+                placeholder="Enter secret code..."
+                autocomplete="off"
             >
 
-            <br><br>
-
-            <label for="dreamDescription">📝 Description</label>
-            <textarea
-                id="dreamDescription"
-                placeholder="Tell me about your dream..."
-            ></textarea>
-
-            <br><br>
-
-            <label for="dreamCategory">🏷️ Category</label>
-            <select id="dreamCategory">
-
-                <option value="">-- Choose a category --</option>
-                <option value="Career">🏦 Career</option>
-                <option value="Study">🎓 Study</option>
-                <option value="Travel">✈️ Travel</option>
-                <option value="Finance">💰 Finance</option>
-                <option value="Family">🏠 Family</option>
-                <option value="Personal">💗 Personal</option>
-                <option value="Other">🌟 Other</option>
-
-            </select>
-
-            <br><br>
-
-            <label for="dreamPriority">🎯 Priority</label>
-            <select id="dreamPriority">
-
-                <option value="">-- Choose priority --</option>
-                <option value="High">🔴 High</option>
-                <option value="Medium">🟡 Medium</option>
-                <option value="Low">🟢 Low</option>
-
-            </select>
-
-            <br><br>
-
-            <label for="targetDate">📅 Target Date</label>
-            <input type="date" id="targetDate">
-
-            <br><br>
-
-            <label for="dreamReason">💌 Why this dream matters?</label>
-            <textarea
-                id="dreamReason"
-                placeholder="Write something special..."
-            ></textarea>
-
-            <br><br>
-
-            <button type="submit">
-                🌷 Add My Dream
+            <button onclick="unlockGarden()">
+                🔓 Unlock My Garden
             </button>
 
-        </form>
-    </section>
-
-
-    <!-- 📋 My Dreams -->
-    <section>
-        <h2>💭 My Dreams</h2>
-
-        <div id="dreamList">
-
-            <!-- Dreams will appear here -->
-
-            <p id="noDreams">
-                🌙 No dreams added yet...
-                <br>
-                Start adding your beautiful dreams! 🐰💗
-            </p>
+            <p id="wrongCode"></p>
 
         </div>
-    </section>
+
+    </div>
 
 
-    <!-- ✨ My Achievements -->
-    <section>
-        <h2>✨ My Achievements</h2>
+    <!-- 🌷 MAIN DREAM GARDEN -->
 
-        <div id="achievementList">
+    <div id="dreamGarden" style="display: none;">
 
-            <p id="noAchievements">
-                🌷 Your completed dreams will appear here...
+        <!-- 🌙 Header -->
+
+        <header>
+
+            <h1>
+                🌙 Bubuu's Dream Garden 🌷
+            </h1>
+
+            <p>
+                “Every dream begins with a little hope.” ✨
             </p>
 
-        </div>
-    </section>
+        </header>
 
 
-    <!-- 🌸 Footer -->
-    <footer>
-        <p>🐰 Made with love, dreams & tiny hopes 🌙💗</p>
-    </footer>
+        <!-- 📊 Dream Summary -->
+
+        <section>
+
+            <h2>
+                ✨ My Dream Journey
+            </h2>
+
+            <div>
+
+                <div>
+                    <h3>💭 Total Dreams</h3>
+                    <p id="totalDreams">0</p>
+                </div>
+
+                <div>
+                    <h3>⏳ In Progress</h3>
+                    <p id="pendingDreams">0</p>
+                </div>
+
+                <div>
+                    <h3>✅ Completed</h3>
+                    <p id="completedDreams">0</p>
+                </div>
+
+                <div>
+                    <h3>🌟 Progress</h3>
+                    <p id="dreamProgress">0%</p>
+                </div>
+
+            </div>
+
+        </section>
 
 
-    <!-- JavaScript will be connected later -->
+        <!-- ➕ Add Dream -->
+
+        <section>
+
+            <h2>
+                💭 Add a New Dream
+            </h2>
+
+            <form id="dreamForm">
+
+                <label for="dreamTitle">
+                    🌷 Dream Title
+                </label>
+
+                <input
+                    type="text"
+                    id="dreamTitle"
+                    placeholder="Enter your dream..."
+                    required
+                >
+
+                <br><br>
+
+
+                <label for="dreamDescription">
+                    📝 Description
+                </label>
+
+                <textarea
+                    id="dreamDescription"
+                    placeholder="Tell me about your dream..."
+                ></textarea>
+
+                <br><br>
+
+
+                <label for="dreamCategory">
+                    🏷️ Category
+                </label>
+
+                <select id="dreamCategory">
+
+                    <option value="">
+                        -- Choose a category --
+                    </option>
+
+                    <option value="Career">
+                        🏦 Career
+                    </option>
+
+                    <option value="Study">
+                        🎓 Study
+                    </option>
+
+                    <option value="Travel">
+                        ✈️ Travel
+                    </option>
+
+                    <option value="Finance">
+                        💰 Finance
+                    </option>
+
+                    <option value="Family">
+                        🏠 Family
+                    </option>
+
+                    <option value="Personal">
+                        💗 Personal
+                    </option>
+
+                    <option value="Other">
+                        🌟 Other
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <label for="dreamPriority">
+                    🎯 Priority
+                </label>
+
+                <select id="dreamPriority">
+
+                    <option value="">
+                        -- Choose priority --
+                    </option>
+
+                    <option value="High">
+                        🔴 High
+                    </option>
+
+                    <option value="Medium">
+                        🟡 Medium
+                    </option>
+
+                    <option value="Low">
+                        🟢 Low
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <label for="targetDate">
+                    📅 Target Date
+                </label>
+
+                <input
+                    type="date"
+                    id="targetDate"
+                >
+
+                <br><br>
+
+
+                <label for="dreamReason">
+                    💌 Why this dream matters?
+                </label>
+
+                <textarea
+                    id="dreamReason"
+                    placeholder="Write something special..."
+                ></textarea>
+
+                <br><br>
+
+
+                <button type="submit">
+                    🌷 Add My Dream
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- 📋 My Dreams -->
+
+        <section>
+
+            <h2>
+                💭 My Dreams
+            </h2>
+
+            <div id="dreamList">
+
+                <p id="noDreams">
+                    🌙 No dreams added yet...
+                    <br>
+                    Start adding your beautiful dreams! 🐰💗
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ✨ My Achievements -->
+
+        <section>
+
+            <h2>
+                ✨ My Achievements
+            </h2>
+
+            <div id="achievementList">
+
+                <p id="noAchievements">
+                    🌷 Your completed dreams will appear here...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 🌸 Footer -->
+
+        <footer>
+
+            <p>
+                🐰 Made with love, dreams & tiny hopes 🌙💗
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ⚙️ JavaScript -->
+
     <script src="script.js"></script>
+
+
+    <!-- 🔐 LOCK SCRIPT -->
+
+    <script>
+
+        function unlockGarden() {
+
+            const enteredCode =
+                document.getElementById("secretCode").value;
+
+            const correctCode = "Bubuu123";
+
+            const lockScreen =
+                document.getElementById("lockScreen");
+
+            const dreamGarden =
+                document.getElementById("dreamGarden");
+
+            const wrongCode =
+                document.getElementById("wrongCode");
+
+
+            if (enteredCode === correctCode) {
+
+                lockScreen.style.display = "none";
+
+                dreamGarden.style.display = "block";
+
+                wrongCode.textContent = "";
+
+            } else {
+
+                wrongCode.textContent =
+                    "🐰 Bubuu maa... secret code wrong! 💗";
+
+            }
+
+        }
+
+
+        document
+            .getElementById("secretCode")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+
+                    unlockGarden();
+
+                }
+
+            });
+
+    </script>
 
 </body>
 
